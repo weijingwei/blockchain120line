@@ -39,10 +39,10 @@ public class SparkWeb {
 		web.getBlockChain().add(genesisBlock);
 		Route route1 = web.new Get_RetriveAllBlockChain();
 		Spark.get("/", route1);
-		LOGGER.info("route1 is running...");
+		LOGGER.info("route1 is running at: localhost:4567 (GET)");
 		Route route2 = web.new Post_CreateBlock();
 		Spark.post("/", route2);
-		LOGGER.info("route2 is running...");
+		LOGGER.info("route2 is running at: localhost:4567 (POST)");
 	}
 
 	public static String calculateHash(Block block) {
